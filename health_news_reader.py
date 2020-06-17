@@ -2,6 +2,7 @@
 # using two important and popular python pacakages requests and json
 import requests
 import json
+import datetime
 # function for speech
 def speak(str):
     from win32com.client import Dispatch
@@ -10,6 +11,8 @@ def speak(str):
 # main programme
 if __name__ == "__main__":
     print("\n********** Here is Today's Health News ***********")
+    now= datetime.datetime.now()
+    print('\nDATE: 'f'{now:%d-%m-%Y | %H:%M }')
     speak("Here is Today's health news")
     url="http://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=3e33ba1948eb4504b47af11904512730"
     news=requests.get(url).text # creating url request
