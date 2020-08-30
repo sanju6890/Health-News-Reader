@@ -1,4 +1,4 @@
-# Read newspaper with python
+# Read news-updates with Python3
 # using two important and popular python pacakages requests and json
 import requests
 import json
